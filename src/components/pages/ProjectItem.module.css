@@ -1,0 +1,72 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.5rem 0;
+  border-bottom: solid 1px #38383835;
+}
+.content {
+  flex-basis: 40%;
+}
+.content h1 {
+  color: #383838;
+  font-size: 4.5rem;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.content span {
+  color: rgba(19, 69, 185, 0.95);
+}
+.content p {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-family: "Questrial", sans-serif;
+  color: #383838;
+  line-height: 1.5;
+}
+.controls {
+  margin-right: 7rem;
+}
+.controls a {
+  font-size: 1.7rem;
+  font-family: "Questrial", sans-serif;
+  border: solid 1px #414141;
+  border-radius: 5rem;
+  padding: 2rem 4rem;
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.controls a:not(:last-child) {
+  margin-right: 2rem;
+}
+.controls a:hover {
+  color: #fff;
+  border-color: #fff;
+  background-color: #333;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    flex-basis: 45%;
+  }
+  .controls {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 428px) {
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .controls {
+    margin-right: 0rem;
+  }
+  .content p {
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .content h1 {
+    font-size: 4rem;
+  }
+}

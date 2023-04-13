@@ -88,7 +88,7 @@
 }
 @media screen and (max-width: 768px) {
   .main {
-    margin-top: 8rem;
+    margin-top: 7rem;
     margin-bottom: 5rem;
   }
   .nav li {
@@ -115,13 +115,13 @@
   }
   .main div h2 {
     width: 70%;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
   }
 }
 @media screen and (max-width: 375px) {
   .main div h1 {
     font-size: 7.5rem;
-    line-height: 7rem;
+    line-height: 6rem;
   }
   .main div h2 {
     width: 75%;

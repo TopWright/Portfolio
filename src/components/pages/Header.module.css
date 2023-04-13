@@ -115,13 +115,13 @@
   }
   .main div h2 {
     width: 70%;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 @media screen and (max-width: 375px) {
   .main div h1 {
     font-size: 7.5rem;
-    line-height: 5rem;
+    line-height: 7rem;
   }
   .main div h2 {
     width: 75%;

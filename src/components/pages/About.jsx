@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section className={classes.about} id="About">
       <div className={classes.content}>
-        I'm <span>TopWright</span>, i create functional & visually pleasing user
+        I'm <span>Temi Wright</span>, i create functional & visually pleasing user
         interfaces for the web and mobile.
       </div>
 

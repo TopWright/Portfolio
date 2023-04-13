@@ -15,12 +15,7 @@ const ProjectItem = (props) => {
           <span>I</span>
           {props.title}
         </h1>
-        <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptas
-          dicta ex tenetur modi pariatur inventore, dignissimos asperiores
-          soluta, eius saepe nobis eaque quis unde sit velit amet consequuntur
-          ipsum.
-        </p>
+        <p className="description">{props.description}</p>
       </div>
 
       <div className={classes.controls}>

@@ -19,11 +19,28 @@ const Projects = () => {
         <span className={classes.count}>{`(${count})`}</span>
       </div>
 
-      <ProjectItem title="Note App" />
-      <ProjectItem title="Dictionary App" />
-      <ProjectItem title="Music App" />
-      <ProjectItem title="Recipie App" />
-      <ProjectItem title="MetaMask App" />
+      <ProjectItem
+        title="Note App"
+        description="Developed a Note taking web application that gives users the ability to perform CRUD functionalities with a well-structured user interface, authentication process, and database service"
+      />
+      <ProjectItem
+        title="Dictionary App"
+        description="Built A Dictionary web Application that enables users to search for any word, keep records of recent words, and also favorite words with live API and Unlimited searches per day 
+"
+      />
+      <ProjectItem
+        title="Music App"
+        description="Implemented A Music Player Web Application for the Jon Bellon Lovers where users can use the play, pause, next, previous, and shuffle controls and also add favorite songs
+"
+      />
+      <ProjectItem
+        title="Recipie App"
+        description="Created a Food Recipe web Application with live API, Enabling users to get their favorite food recipes, with other functional features"
+      />
+      <ProjectItem
+        title="MetaMask App"
+        description="Designed Interactive and modern landing pages with elegant and smooth User interfaces and User Experience for the web and mobile screens"
+      />
     </section>
   );
 };

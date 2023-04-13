@@ -108,14 +108,14 @@
   }
   .main div h1 {
     font-size: 8rem;
-    line-height: 6rem;
+    line-height: 7rem;
   }
   .e {
     font-size: 5rem;
   }
   .main div h2 {
     width: 70%;
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 }
 @media screen and (max-width: 375px) {

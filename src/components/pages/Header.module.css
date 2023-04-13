@@ -87,6 +87,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .main {
+    margin-top: 10rem;
+  }
   .nav li {
     display: none;
   }
@@ -99,6 +102,9 @@
   }
 }
 @media screen and (max-width: 428px) {
+  .header {
+    height: 90vh;
+  }
   .main div h1 {
     font-size: 8rem;
     line-height: 5rem;

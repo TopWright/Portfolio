@@ -161,6 +161,10 @@
   }
 }
 @media screen and (max-width: 428px) {
+  .contact {
+    margin: 5rem 1rem;
+    height: 200vh;
+  }
   .title {
     display: none;
   }

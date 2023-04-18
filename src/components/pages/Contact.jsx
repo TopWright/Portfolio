@@ -26,7 +26,7 @@ const Contact = () => {
       </div>
 
       <div className={classes.socialsCtrl}>
-        <a href="#twitter" className={classes.socials}>
+        <a href="https://twitter.com/Top_WrightDev" className={classes.socials}>
           <div className={classes.text}>
             <h1>Twitter</h1>
             <p>@Top_WrightDev</p>
@@ -36,30 +36,33 @@ const Contact = () => {
             <FontAwesomeIcon icon={faTwitter} />
           </aside>
         </a>
-        <a href="#linkedin" className={classes.socials}>
+        <a
+          href="https://linkedin.com/in/topwrightdev"
+          className={classes.socials}
+        >
           <div className={classes.text}>
             <h1>Linkedin</h1>
-            <p>@Top_Wright</p>
+            <p>@topwrightdev</p>
           </div>
 
           <aside className={classes.icon}>
             <FontAwesomeIcon icon={faLinkedin} />
           </aside>
         </a>
-        <a href="#Github" className={classes.socials}>
+        <a href="https://github.com/TopWright" className={classes.socials}>
           <div className={classes.text}>
             <h1>GitHub</h1>
-            <p>@Top_Wright</p>
+            <p>@TopWright</p>
           </div>
 
           <aside className={classes.icon}>
             <FontAwesomeIcon icon={faGithub} />
           </aside>
         </a>
-        <a href="#instagram" className={classes.socials}>
+        <a href="https://dev.to/topwrightdev" className={classes.socials}>
           <div className={classes.text}>
-            <h1>Instagram</h1>
-            <p>@Top_Wright</p>
+            <h1>DEV</h1>
+            <p>@topwrightdev</p>
           </div>
 
           <aside className={classes.icon}>

@@ -22,6 +22,7 @@ const Projects = () => {
       <ProjectItem
         title="Note App"
         description="Developed a Note taking web application that gives users the ability to perform CRUD functionalities with a well-structured user interface, authentication process, and database service"
+        code=''
       />
       <ProjectItem
         title="Dictionary App"

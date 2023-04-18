@@ -104,7 +104,7 @@
 }
 @media screen and (max-width: 428px) {
   .header {
-    height: 75vh;
+    height: 85vh;
   }
   .main div h1 {
     font-size: 8rem;

@@ -66,7 +66,7 @@ const Contact = () => {
           </div>
 
           <aside className={classes.icon}>
-            <FontAwesomeIcon icon={faInstagram} />
+            De
           </aside>
         </a>
       </div>

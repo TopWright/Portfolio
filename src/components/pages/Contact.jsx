@@ -8,13 +8,12 @@ import {
   faTwitter,
   faGithub,
   faLinkedin,
-  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 const Contact = () => {
   return (
     <section className={classes.contact} id="Contact">
       <div className={classes.title}>
-        let's talk about the <span>next</span> big thing.
+        let's talk about the <span>next</span> big thing...
       </div>
       <div className={classes.title2}>
         let's<span>connect.</span>

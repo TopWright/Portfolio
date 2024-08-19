@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 import classes from "./Projects.module.css";
 
 const Projects = () => {
-  const count = 5;
+  const count = 6;
 
   return (
     <section className={classes.project} id="Projects">
@@ -19,11 +19,12 @@ const Projects = () => {
         <span className={classes.count}>{`(${count})`}</span>
       </div>
 
+     
       <ProjectItem
-        title="Note App"
-        description="Developed a Note taking web application that gives users the ability to perform CRUD functionalities with a well-structured user interface, authentication process, and database service"
-        link=""
-        code="https://github.com/TopWright/INote"
+        title="Classcube Pro"
+        description="A cutting-edge Learning Management System that provides a comprehensive online learning environment. It offers a range of tools and features to facilitate effective learning, course management, and collaboration for educators and learners."
+        link="https://pro.classcube.online/"
+        code={false}
       />
       <ProjectItem
         title="Dictionary App"
@@ -32,21 +33,28 @@ const Projects = () => {
         code="https://github.com/TopWright/IDictionary"
       />
       <ProjectItem
-        title="Music App"
-        description="Implemented A Music Player Web Application for the Jon Bellon Lovers where users can use the play, pause, next, previous, and shuffle controls and also add favorite songs"
-        link="https://imusicweb.netlify.app/"
-        code="https://github.com/TopWright/Imusic"
+        title="Lions Of Africa(NFT)"
+        description="A Landing page for the lions of africa NFT. Lions of africa brings the embodiment of African culture to the NFT market."
+        link="https://loa-gamma.vercel.app/"
+        code={false}
       />
       <ProjectItem
-        title="Recipie App"
-        description="Created a Food Recipe web Application with live API, Enabling users to get their favorite food recipes, with other functional features"
-        link="https://ifoodapp.netlify.app/"
-        code="https://github.com/TopWright/Foodie"
+        title="Liveizy"
+        description="A technology-driven, home-rental services application that helps people live better lives, through easy access to quality homes-to-rent, rent-financing, rental-home management, and other essential services."
+        link="https://liveizy.com/"
+        code={false}
       />
       <ProjectItem
-        title="MetaMask App"
-        description="Designed Interactive and modern landing pages with elegant and smooth User interfaces and User Experience for the web and mobile screens"
-        link=""
+        title="Revocube Spaces"
+        description="A web application for apartment rentals featuring location-based search functionality, detailed apartment listings with photos and amenities, booking capabilities, and real-time communication tools between users and property owners. "
+        link="https://revocubespaces.com/"
+        code={false}
+      />
+      <ProjectItem
+        title="SANEF Creatives"
+        description="Developed a custom application for SANEF Creatives Limited, a Bankers' Committee initiative, aimed at supporting key projects like the restoration of the National Theatre and the reconstruction of 40 police stations across Nigeria"
+        link="https://staging.sanef.panera.africa/"
+        code={false}
       />
     </section>
   );

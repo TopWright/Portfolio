@@ -17,7 +17,6 @@ const App = () => {
         <Header />
         <About />
       </Wrapper>
-
       <Background />
       <Wrapper>
         <Projects />

@@ -4,12 +4,16 @@ import React from "react";
 
 const Button = (props) => {
   return (
-    <button
+    <a
+      href={props.href}
       className={props.className}
-      type={ props.type }
-      onClick={ props.onClick }>
-      { props.title }
-    </button>
+      type={props.type}
+      onClick={props.onClick}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {props.title}
+    </a>
   );
 };
 

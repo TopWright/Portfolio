@@ -20,24 +20,12 @@ const Contact = () => {
       </div>
       {/* <div className="arrow"></div> */}
       <div className={classes.messageCtrl}>
-        <Button className={classes.control} title="Write a message" />
-        <Button className={classes.control} title="Discuss Project" />
+        <Button href='mailto:topwrightdev@gmail.com' className={classes.control} title="Write a message" />
+        <Button href='https://wa.link/6mwq6p' className={classes.control} title="Discuss Project" />
       </div>
 
       <div className={classes.socialsCtrl}>
-        <a href="https://twitter.com/Top_WrightDev" className={classes.socials}>
-          <div className={classes.text}>
-            <h1>Twitter</h1>
-            <p>@Top_WrightDev</p>
-          </div>
-
-          <aside className={classes.icon}>
-            <FontAwesomeIcon icon={faTwitter} />
-          </aside>
-        </a>
-        <a
-          href="https://linkedin.com/in/topwrightdev"
-          className={classes.socials}
+        <a href="https://www.linkedin.com/in/topwrightdev" className={classes.socials} target="_blank" rel="noreferrer"
         >
           <div className={classes.text}>
             <h1>Linkedin</h1>
@@ -48,7 +36,7 @@ const Contact = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </aside>
         </a>
-        <a href="https://github.com/TopWright" className={classes.socials}>
+        <a href="https://github.com/TopWright" className={classes.socials} target="_blank" rel="noreferrer">
           <div className={classes.text}>
             <h1>GitHub</h1>
             <p>@TopWright</p>
@@ -58,7 +46,17 @@ const Contact = () => {
             <FontAwesomeIcon icon={faGithub} />
           </aside>
         </a>
-        <a href="https://dev.to/topwrightdev" className={classes.socials}>
+        <a href="https://x.com/TopWright01" className={classes.socials} target="_blank" rel="noreferrer">
+          <div className={classes.text}>
+            <h1>Twitter</h1>
+            <p>@TopWright</p>
+          </div>
+
+          <aside className={classes.icon}>
+            <FontAwesomeIcon icon={faTwitter} />
+          </aside>
+        </a>
+        <a href="https://dev.to/topwrightdev" className={classes.socials} target="_blank" rel="noreferrer">
           <div className={classes.text}>
             <h1>DEV</h1>
             <p>@topwrightdev</p>

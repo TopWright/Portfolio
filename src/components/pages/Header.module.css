@@ -1,34 +1,46 @@
 .header {
   height: 100vh;
 }
+
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3rem 0;
 }
+
 .top div a {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: "Questrial", sans-serif;
   font-weight: 700;
 }
+
 /* .nav ul {
   background-color: rgb(28, 107, 152);
 } */
+.nav {
+  width: 70%;
+}
+.nav ul{
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav li {
   display: inline-block;
-  margin-left: 32rem;
   font-family: "Questrial", sans-serif;
   font-weight: 500;
   color: #383838;
 }
 
 .nav li a {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
+
 .main {
-  margin-top: 4rem;
+  margin-top: 10rem;
 }
+
 .main div h1 {
   display: inline-block;
   font-size: 15rem;
@@ -36,9 +48,11 @@
   font-family: "Cinzel", serif;
   color: #383838;
 }
+
 .text {
   margin-left: 14rem;
 }
+
 .main div h2 {
   width: 30%;
   line-height: 1.6;
@@ -49,13 +63,16 @@
   font-family: "Questrial", sans-serif;
   user-select: none;
   color: #534f4f;
+  letter-spacing: 0.2px;
 }
+
 .e {
   font-size: 15rem;
   font-family: "Times New Roman", Times, serif;
   /* font-style: italic; */
   color: rgba(19, 69, 185, 0.95);
 }
+
 .main i {
   color: rgba(19, 69, 185, 0.95);
   font-weight: 900;
@@ -67,62 +84,77 @@
     margin-left: 29rem;
   }
 }
+
 @media screen and (max-width: 1280px) {
   .main div h1 {
     font-size: 14rem;
   }
 }
+
 @media screen and (max-width: 884px) {
   .main div h1 {
     font-size: 15rem;
   }
+
   .nav li {
     margin-left: 23rem;
   }
+
   .e {
     font-size: 9rem;
   }
+
   .text {
     margin-left: 0rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .main {
     margin-top: 7rem;
     margin-bottom: 5rem;
   }
+
   .nav li {
     display: none;
   }
+
   .main div h1 {
     line-height: 13rem;
   }
+
   .e {
     font-size: 15rem;
     margin-left: 10rem;
   }
 }
+
 @media screen and (max-width: 428px) {
   .header {
     height: 85vh;
   }
+
   .main div h1 {
     font-size: 8rem;
     line-height: 7rem;
   }
+
   .e {
     font-size: 5rem;
   }
+
   .main div h2 {
     width: 70%;
     margin-top: 3.5rem;
   }
 }
+
 @media screen and (max-width: 375px) {
   .main div h1 {
     font-size: 7.5rem;
     line-height: 6rem;
   }
+
   .main div h2 {
     width: 75%;
   }

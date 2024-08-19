@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 import classes from "./ProjectItem.module.css";
@@ -11,21 +12,22 @@ const ProjectItem = (props) => {
     <div className={classes.item}>
       <div className={classes.content}>
         <h1 className="title">
-          {" "}
-          <span>I</span>
           {props.title}
         </h1>
         <p className="description">{props.description}</p>
       </div>
 
       <div className={classes.controls}>
-        <a href={props.link}>
-          {" "}
+        <a href={props.link} target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faLink} /> Demo
         </a>
-        <a href={props.code}>
-          <FontAwesomeIcon icon={faGithub} /> Source code
-        </a>
+        {props.code ? (
+          <a href={props.code} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faGithub} /> Source code
+          </a>
+        ) : (
+          <a className={classes.noLink}>&nbsp;</a>
+        )}
       </div>
     </div>
   );

@@ -21,7 +21,8 @@
 .nav {
   width: 70%;
 }
-.nav ul{
+
+.nav ul {
   display: flex;
   justify-content: space-between;
 }
@@ -131,12 +132,16 @@
 
 @media screen and (max-width: 428px) {
   .header {
-    height: 85vh;
+    height: 80vh;
+  }
+
+  .main {
+    margin-top: 12rem;
   }
 
   .main div h1 {
-    font-size: 8rem;
-    line-height: 7rem;
+    font-size: 7rem;
+    line-height: 6rem;
   }
 
   .e {
@@ -144,18 +149,14 @@
   }
 
   .main div h2 {
-    width: 70%;
+    width: 95%;
     margin-top: 3.5rem;
   }
 }
 
 @media screen and (max-width: 375px) {
   .main div h1 {
-    font-size: 7.5rem;
-    line-height: 6rem;
-  }
-
-  .main div h2 {
-    width: 75%;
+    font-size: 7rem;
+    line-height: 5rem;
   }
 }

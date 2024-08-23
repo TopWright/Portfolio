@@ -45,6 +45,12 @@ const Projects = () => {
         code={false}
       />
       <ProjectItem
+        title="Meals App"
+        description="Explore a world of cuisine with this app, powered by the Meal DB API. Discover diverse meal categories from around the globe, filter by category, state, area, and ingredients, or search for specific dishes. Each meal comes with detailed cooking instructions, external resources like Wikipedia, and even a YouTube link to guide you through the process. Perfect for food enthusiasts looking to explore new recipes and cooking techniques."
+        link="https://top-meal.netlify.app/"
+        code={false}
+      />
+      <ProjectItem
         title="Revocube Spaces"
         description="A web application for apartment rentals featuring location-based search functionality, detailed apartment listings with photos and amenities, booking capabilities, and real-time communication tools between users and property owners. "
         link="https://revocubespaces.com/"

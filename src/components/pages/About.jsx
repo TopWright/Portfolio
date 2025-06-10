@@ -18,7 +18,9 @@ const About = () => {
         <div>
           <a
             className={classes.button}
-            href="https://docs.google.com/document/d/e/2PACX-1vSySWsXYMzDSrTZbT9jSKkS8zR8CdurByGt5H_YdVrRYZIdTUuBQ2-yNBWrPAnIfOo-n-eg2darQF00/pub"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faFilePdf} style={{ color: "#060709", marginRight: '5px' }} />
             Resume

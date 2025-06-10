@@ -1,67 +1,109 @@
-import React from "react";
-
+import React, { useRef } from "react";
 import ProjectItem from "./ProjectItem";
-
 import classes from "./Projects.module.css";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { projectsData } from "../../helper/Constant";
+
+// Register GSAP plugins
+gsap.registerPlugin(SplitText, ScrollTrigger, useGSAP);
 
 const Projects = () => {
-  const count = 6;
+  const container = useRef();
+  const titleRef = useRef(null);
+  const marlRef = useRef(null);
+  const countRef = useRef(null);
+
+  useGSAP(() => {
+    // Split the title text
+    const splitTitle = new SplitText(titleRef.current, {
+      type: "chars,words",
+      charsClass: `${classes.char}`,
+      wordsClass: `${classes.word}`
+    });
+
+    // Split the "Works" part
+    const splitMarl = new SplitText(marlRef.current, {
+      type: "chars",
+      charsClass: `${classes.char}`
+    });
+
+    // Set initial state (hidden)
+    gsap.set([...splitTitle.chars, ...splitMarl.chars], {
+      y: "100%",
+      opacity: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 0%, 0% 0%)"
+    });
+
+    // Create timeline for animations with ScrollTrigger
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 90%",
+        end: "top 50%",
+        toggleActions: "play none none none",
+        scrub: true,
+      }
+    });
+
+    // Animate "Feat"
+    tl.to(splitTitle.chars, {
+      y: "0%",
+      opacity: 1,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      stagger: 0.05,
+      duration: 0.8,
+      ease: 'circ.out',
+    });
+
+    // Animate "Works"
+    tl.to(splitMarl.chars, {
+      y: "0%",
+      opacity: 1,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      stagger: 0.05,
+      duration: 0.8,
+      ease: 'circ.out',
+    }, "-=0.5");
+
+    // Animate the count
+    tl.from(countRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 0.8
+    }, "-=0.3");
+
+    // Cleanup function
+    return () => {
+      splitTitle.revert();
+      splitMarl.revert();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   return (
-    <section className={classes.project} id="Projects">
+    <section className={classes.project} id="Projects" ref={container}>
       <div className={classes.title}>
-        <h1>
+        <h1 ref={titleRef}>
           Feat{" "}
-          <span className={classes.marl}>
+          <span ref={marlRef} className={classes.marl}>
             Wo<span className={classes.color}>r</span>ks
           </span>{" "}
         </h1>
-        <span className={classes.count}>{`(${count})`}</span>
+        <span ref={countRef} className={classes.count}>{`(${projectsData.length})`}</span>
       </div>
 
-     
-      <ProjectItem
-        title="Classcube Pro"
-        description="A cutting-edge Learning Management System that provides a comprehensive online learning environment. It offers a range of tools and features to facilitate effective learning, course management, and collaboration for educators and learners."
-        link="https://pro.classcube.online/"
-        code={false}
-      />
-      <ProjectItem
-        title="Dictionary App"
-        description="Built A Dictionary web Application that enables users to search for any word, keep records of recent words, and also favorite words with live API and Unlimited searches per day"
-        link="https://idiktionary.netlify.app/"
-        code="https://github.com/TopWright/IDictionary"
-      />
-      <ProjectItem
-        title="Lions Of Africa(NFT)"
-        description="A Landing page for the lions of africa NFT. Lions of africa brings the embodiment of African culture to the NFT market."
-        link="https://loa-gamma.vercel.app/"
-        code={false}
-      />
-      <ProjectItem
-        title="Liveizy"
-        description="A technology-driven, home-rental services application that helps people live better lives, through easy access to quality homes-to-rent, rent-financing, rental-home management, and other essential services."
-        link="https://liveizy.com/"
-        code={false}
-      />
-      <ProjectItem
-        title="Meals App"
-        description="Explore a world of cuisine with this app, powered by the Meal DB API. Discover diverse meal categories from around the globe, filter by category, state, area, and ingredients, or search for specific dishes. Each meal comes with detailed cooking instructions, external resources like Wikipedia, and even a YouTube link to guide you through the process. Perfect for food enthusiasts looking to explore new recipes and cooking techniques."
-        link="https://top-meal.netlify.app/"
-        code={false}
-      />
-      <ProjectItem
-        title="Revocube Spaces"
-        description="A web application for apartment rentals featuring location-based search functionality, detailed apartment listings with photos and amenities, booking capabilities, and real-time communication tools between users and property owners. "
-        link="https://revocubespaces.com/"
-        code={false}
-      />
-      <ProjectItem
-        title="SANEF Creatives"
-        description="Developed a custom application for SANEF Creatives Limited, a Bankers' Committee initiative, aimed at supporting key projects like the restoration of the National Theatre and the reconstruction of 40 police stations across Nigeria"
-        link="https://staging.sanef.panera.africa/"
-        code={false}
-      />
+      {projectsData.map((project, index) => (
+        <ProjectItem
+          key={index}
+          title={project.title}
+          description={project.description}
+          link={project.link}
+          code={project.code}
+        />
+      ))}
     </section>
   );
 };

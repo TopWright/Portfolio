@@ -1,5 +1,5 @@
 .project {
-  padding: 8rem 0;
+  padding: 10rem 0;
   margin-top: 3rem;
 
   position: relative;
@@ -33,6 +33,11 @@
   }
   .title {
     margin-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .marl {
+    display: block;
   }
 }
 @media screen and (max-width: 428px) {

@@ -36,41 +36,48 @@
 
 .nav li a {
   font-size: 1.8rem;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.nav li a:hover {
+  color: rgba(19, 69, 185, 0.95);
 }
 
 .main {
-  margin-top: 10rem;
+  margin-top: 12rem;
 }
 
 .main div h1 {
   display: inline-block;
-  font-size: 15rem;
+  font-size: 19rem;
   font-weight: 700;
   font-family: "Cinzel", serif;
   color: #383838;
+  white-space: nowrap;
+  letter-spacing: 1rem;
 }
 
 .text {
   margin-left: 14rem;
 }
 
-.main div h2 {
+.main h2 {
   width: 30%;
   line-height: 1.6;
   float: right;
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 900;
   font-family: "Questrial", sans-serif;
   user-select: none;
   color: #534f4f;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
 .e {
   font-size: 15rem;
   font-family: "Times New Roman", Times, serif;
-  /* font-style: italic; */
+  font-style: italic;
   color: rgba(19, 69, 185, 0.95);
 }
 
@@ -80,9 +87,55 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-@media screen and (max-width: 1355px) {
-  .nav li {
-    margin-left: 29rem;
+.control {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.control svg {
+  font-size: 1rem;
+  font-family: "Questrial", sans-serif;
+  border: solid 1px #383838;
+  background-color: #333;
+  color: #fff;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 1.2rem;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  animation: bounce 1.5s infinite ease-in-out;
+}
+.control svg:hover {
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .text {
+    margin-left: 0rem;
+  }
+  .main h2 {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .main div h1 {
+    font-size: 15rem;
   }
 }
 
@@ -90,11 +143,14 @@
   .main div h1 {
     font-size: 14rem;
   }
+  .break {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 884px) {
   .main div h1 {
-    font-size: 15rem;
+    font-size: 14rem;
   }
 
   .nav li {
@@ -105,12 +161,14 @@
     font-size: 9rem;
   }
 
-  .text {
+  .main .text {
     margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .main {
     margin-top: 7rem;
     margin-bottom: 5rem;
@@ -130,9 +188,9 @@
   }
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
   .header {
-    height: 80vh;
+    height: 75vh;
   }
 
   .main {
@@ -140,23 +198,25 @@
   }
 
   .main div h1 {
-    font-size: 7rem;
-    line-height: 6rem;
+    font-size: 8.3rem;
+    line-height: 7rem;
+    letter-spacing: 2px;
   }
 
   .e {
     font-size: 5rem;
   }
 
-  .main div h2 {
-    width: 95%;
-    margin-top: 3.5rem;
+  .main h2 {
+    width: 101%;
+    float: unset;
+    margin-top: 4rem;
   }
 }
 
 @media screen and (max-width: 375px) {
   .main div h1 {
     font-size: 7rem;
-    line-height: 5rem;
+    line-height: 6rem;
   }
 }

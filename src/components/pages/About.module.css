@@ -1,5 +1,5 @@
 .about {
-  padding: 8rem 0;
+  /* padding: 8rem 0; */
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@
   -webkit-text-stroke-width: 1px;
 }
 .content {
-  width: 30%;
+  width: 35%;
   font-size: 3rem;
   color: #414141;
   text-transform: uppercase;
@@ -53,9 +53,9 @@
   background-color: #333;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1700px) {
   .view {
-    margin-right: 5rem;
+    margin-right: 0rem;
   }
 }
 @media screen and (max-width: 768px) {

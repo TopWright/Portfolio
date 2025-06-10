@@ -7,11 +7,16 @@ export const projectsData = [
       code: false,
    },
    {
-      title: "Dictionary App",
+      title: "IDictionary App",
       description:
          "Built a dictionary web application that enables users to search for any word, keep records of recent words, and favorite words, with a live API and unlimited searches per day.",
       link: "https://idiktionary.netlify.app/",
       code: "https://github.com/TopWright/IDictionary",
+   },
+   {
+      title: "IExchange App",
+      description: "Simple currency converter that provides quick exchange rate calculations between major world currencies with a clean, user-friendly interface.",
+      link: "https://iexchange.netlify.app/",
    },
    {
       title: "Lions Of Africa (NFT)",

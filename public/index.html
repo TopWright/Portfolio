@@ -4,40 +4,72 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>Top Wright</title>
+  <!-- Viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Primary Meta Tags -->
+  <meta name="theme-color" content="#000000" />
+  <title>Top Wright | Fullstack Developer | Web & Mobile App Specialist</title>
+  <meta name="title" content="Top Wright | Fullstack Developer | Web & Mobile App Specialist">
+  <meta name="description"
+    content="Professional portfolio of Top Wright, Fullstack Developer specializing in Web2, Mobile and Web3 applications. View my projects and contact me for development work.">
+  <meta name="keywords"
+    content="fullstack developer, mobile developer, web developer, react developer, node.js, portfolio, web3 developer, javascript developer">
+  <meta name="author" content="Top Wright">
+
+  <!-- Linkendin -->
+  <meta property="linkedin:card" content="summary_large_image">
+  <meta property="linkedin:url" content="https://www.linkedin.com/in/topwrightdev">
+  <meta property="linkedin:title" content="Top Wright | Fullstack Developer | Web & Mobile App Specialist">
+  <meta property="linkedin:description"
+    content="Professional portfolio of Top Wright, Fullstack Developer specializing in Web2, Mobile and Web3 applications.">
+  <meta property="linkedin:image" content="%PUBLIC_URL%/social-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://x.com/TopWright01">
+  <meta property="twitter:title" content="Top Wright | Fullstack Developer | Web & Mobile App Specialist">
+  <meta property="twitter:description"
+    content="Professional portfolio of Top Wright, Fullstack Developer specializing in Web2, Mobile and Web3 applications.">
+  <meta property="twitter:image" content="%PUBLIC_URL%/social-preview.jpg">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://topwright.netlify.app/" />
+
+  <!-- Preconnect to important third-party domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <!-- Structured data for rich snippets -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Top Wright",
+      "jobTitle": "Fullstack Developer",
+      "url": "https://topwright.netlify.app/",
+      "sameAs": [
+        "https://github.com/TopWright",
+        "https://www.linkedin.com/in/topwrightdev",
+        "https://x.com/TopWright01"
+      ],
+      "skills": "JavaScript, React, Node.js, Web3, Mobile Development"
+    }
+  </script>
 </body>
 
 </html>

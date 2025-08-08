@@ -54,7 +54,7 @@ const Contact = () => {
       y: "0%",
       opacity: 1,
       stagger: 0.05,
-      duration: 0.8,
+      duration: 1,
       ease: 'circ.out',
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
     });
@@ -92,8 +92,9 @@ const Contact = () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: socialsRef.current[0],
-        start: "top 90%",
+        end: "bottom 80%",
         toggleActions: "play none none none",
+        scrub: true
       }
     });
 

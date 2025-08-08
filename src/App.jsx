@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./index.css";
 
@@ -9,10 +9,24 @@ import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import Wrapper from "./components/UI/Wrapper";
 import Background from "./components/UI/Background";
+import gsap from "gsap";
+import ReactLenis from "lenis/react";
 
 const App = () => {
+  const lenisRef = useRef()
+
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.lenis?.raf(time * 1000)
+    }
+
+    gsap.ticker.add(update)
+
+    return () => gsap.ticker.remove(update)
+  }, [])
   return (
     <>
+      <ReactLenis root options={{ autoRaf: false, smoothWheel: true, duration: 2 }} ref={lenisRef} />
       <Wrapper>
         <Header />
         <About />

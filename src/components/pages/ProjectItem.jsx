@@ -19,7 +19,7 @@ const ProjectItem = (props) => {
     gsap.set(container.current, {
       opacity: 0,
       x: 60,
-      delay: 1
+      // delay: 1
     });
 
     // Animation timeline for the project item
@@ -37,7 +37,7 @@ const ProjectItem = (props) => {
     tl.to(container.current, {
       opacity: 1,
       x: 0,
-      duration: 1,
+      duration: 1.5,
       ease: 'circ.out',
       stagger: 0.08,
     });
